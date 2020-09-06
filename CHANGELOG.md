@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] 2020-09-06
+
+### Breaking
+
+- Exception `Folded\FolderNotFoundException` namespace renamed for `Folded\Exceptions\FolderNotFoundException`.
+- Exception `Folded\NotAFolderException` namespace renamed for `Folded\Exceptions\NotAFolderException`.
+
 ## [0.1.0] 2020-09-06
 
 ### Added
