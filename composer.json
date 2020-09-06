@@ -1,0 +1,41 @@
+{
+    "name": "folded/request",
+    "description": "Request utilities, including a request validator, for your PHP web app.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khalyomede",
+            "email": "khalyomede@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4.0",
+        "illuminate/http": "7.*",
+        "illuminate/validation": "7.*"
+    },
+    "scripts": {
+        "test": "pest --coverage",
+        "lint": "php-cs-fixer --allow-risky=yes fix"
+    },
+    "autoload": {
+        "psr-4": {
+            "Folded\\": "src"
+        },
+        "files": [
+            "src/getAllRequestValues.php",
+            "src/getRequestValidationErrors.php",
+            "src/getRequestValue.php",
+            "src/hasRequestValue.php",
+            "src/requestValidationSucceeded.php",
+            "src/setRequestValidationTranslationFolderPath.php",
+            "src/validateRequest.php"
+        ]
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "2.*",
+        "pestphp/pest": "0.3.*",
+        "phpunit/phpunit": "9.*"
+    }
+}
