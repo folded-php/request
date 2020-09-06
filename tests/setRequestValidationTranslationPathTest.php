@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-use Folded\FolderNotFoundException;
-use Folded\NotAFolderException;
 use Folded\RequestValidator;
+use Folded\Exceptions\NotAFolderException;
+use Folded\Exceptions\FolderNotFoundException;
 use function Folded\setRequestValidationTranslationFolderPath;
 
 beforeEach(function (): void {

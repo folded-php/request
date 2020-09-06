@@ -11,6 +11,8 @@ use Illuminate\Validation\Validator;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Translation\FileLoader;
 use Illuminate\Translation\Translator;
+use Folded\Exceptions\NotAFolderException;
+use Folded\Exceptions\FolderNotFoundException;
 
 /**
  * Represent the logic for validating request data.
@@ -133,11 +135,11 @@ class RequestValidator
     public static function setTranslationFolderPath(string $path): void
     {
         if (!file_exists($path)) {
-            throw new FolderNotFoundException("folder $path does not exist");
+            throw (new FolderNotFoundException("folder $path does not exist"))->setFolder($path);
         }
 
         if (!is_dir($path)) {
-            throw new NotAFolderException("$path is not a folder");
+            throw (new NotAFolderException("$path is not a folder"))->setFolder($path);
         }
 
         self::$translationFolderPath = $path;

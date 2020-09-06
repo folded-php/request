@@ -4,8 +4,8 @@ declare(strict_types = 1);
 
 use Folded\Request;
 use Folded\RequestValidator;
-use Folded\NotAFolderException;
-use Folded\FolderNotFoundException;
+use Folded\Exceptions\NotAFolderException;
+use Folded\Exceptions\FolderNotFoundException;
 
 beforeEach(function (): void {
     // Clearing Request object
