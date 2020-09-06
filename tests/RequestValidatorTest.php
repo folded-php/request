@@ -37,10 +37,30 @@ it("should throw an exception if the translation folder does not exist", functio
     RequestValidator::setTranslationFolderPath(__DIR__ . "/misc/not-found");
 });
 
+it("should set the folder in the exception if the translation folder does not exist", function (): void {
+    $folder = __DIR__ . "/misc/not-found";
+
+    try {
+        RequestValidator::setTranslationFolderPath($folder);
+    } catch (FolderNotFoundException $exception) {
+        expect($exception->getFolder())->toBe($folder);
+    }
+});
+
 it("should throw an exception if the path to the translation folder is not a folder", function (): void {
     $this->expectException(NotAFolderException::class);
 
     RequestValidator::setTranslationFolderPath(__DIR__ . "/misc/lang/en/validation.php");
+});
+
+it("should set the folder in the exception if the path to the translation folder is not a folder", function (): void {
+    $folder = __DIR__ . "/misc/lang/en/validation.php";
+
+    try {
+        RequestValidator::setTranslationFolderPath($folder);
+    } catch (NotAFolderException $exception) {
+        expect($exception->getFolder())->toBe($folder);
+    }
 });
 
 it("should return true if the validation succeeded", function (): void {
