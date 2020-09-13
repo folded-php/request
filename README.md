@@ -7,6 +7,7 @@ Request utilities, including a request validator, for your PHP web app.
 ## Summary
 
 - [About](#about)
+- [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Examples](#examples)
@@ -25,6 +26,14 @@ Folded is a constellation of packages to help you setting up a web app easily, u
 - [folded/orm](https://github.com/folded-php/orm): An ORM for you web app.
 - [folded/routing](https://github.com/folded-php/routing): Routing functions for your PHP web app.
 - [folded/view](https://github.com/folded-php/view): View utilities for your PHP web app.
+
+## Features
+
+- Can get GET or POST request data
+- Can check if a key is present in GET or POST data
+- Can validate request (using Laravel's validation request utilities)
+- Can check if the request validation succeeded
+- Can get the (translated) errors when the request validation failed
 
 ## Requirements
 
