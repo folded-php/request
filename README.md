@@ -2,7 +2,7 @@
 
 Request utilities, including a request validator, for your PHP web app.
 
-[![Packagist License](https://img.shields.io/packagist/l/folded/request)](https://github.com/folded-php/request/blob/master/LICENSE) [![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/folded/request)](https://github.com/folded-php/request/blob/master/composer.json#L14) [![Packagist Version](https://img.shields.io/packagist/v/folded/request)](https://packagist.org/packages/folded/request) [![Build Status](https://travis-ci.com/folded-php/request.svg?branch=master)](https://travis-ci.com/folded-php/request) [![Maintainability](https://api.codeclimate.com/v1/badges/a00ce29a5b549d6f2ba4/maintainability)](https://codeclimate.com/github/folded-php/request/maintainability)
+[![Packagist License](https://img.shields.io/packagist/l/folded/request)](https://github.com/folded-php/request/blob/master/LICENSE) [![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/folded/request)](https://github.com/folded-php/request/blob/master/composer.json#L14) [![Packagist Version](https://img.shields.io/packagist/v/folded/request)](https://packagist.org/packages/folded/request) [![Build Status](https://travis-ci.com/folded-php/request.svg?branch=master)](https://travis-ci.com/folded-php/request) [![Maintainability](https://api.codeclimate.com/v1/badges/a00ce29a5b549d6f2ba4/maintainability)](https://codeclimate.com/github/folded-php/request/maintainability) [![TODOs](https://img.shields.io/endpoint?url=https://api.tickgit.com/badge?repo=github.com/folded-php/request)](https://www.tickgit.com/browse?repo=github.com/folded-php/request)
 
 ## Summary
 
