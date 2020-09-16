@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- New method `storeOldRequestValues()` to store form values (and being able to retreive them later).
+- New method `getOldRequestValue("email")` to get a previously submitted form value.
+
 ## [0.2.0] 2020-09-06
 
 ### Breaking
