@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] 2020-09-18
+
 ### Added
 
 - New method `storeOldRequestValues()` to store form values (and being able to retreive them later).
