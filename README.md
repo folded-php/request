@@ -81,6 +81,7 @@ Here is [the content](https://github.com/laravel/laravel/blob/v7.25.0/resources/
 - [5. Check if a request validation succeeded](#5-check-if-a-request-validation-succeeded)
 - [6. Get error messages after a request validation](#6-get-error-messages-after-a-request-validation)
 - [7. Choosing the validation error language before validating request](#7-choosing-the-validation-error-language-before-validating-request)
+- [8. Get an old submited form value](#8-get-an-old-submited-form-value)
 
 ### 1. Get a request value by its key
 
@@ -189,6 +190,26 @@ use function Folded\setRequestValidationTranslationFolderPath;
 setRequestValidationTranslationFolderPath(__DIR__ . "/lang");
 setRequestValidationLang("fr");
 ```
+
+### 8. Get an old submited form value
+
+In this example, we will get a previously submitted form value. This is convenient if you want to display values the user used before an error occured (in order for the user to not loose everything he wrote).
+
+```php
+use function Folded\storeOldRequestValues;
+use function Folded\getOldRequestValue;
+
+// Session must be enabled to make it work
+session_start();
+
+// As soon as possible
+storeOldRequestValues();
+
+// Get the old form values, assuming you previously listened a POST request with an email key
+echo getOldRequestValue("email");
+```
+
+If the key is not found, the `getOldRequestValue()` function returns `null`.
 
 ## Version support
 

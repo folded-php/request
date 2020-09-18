@@ -31,7 +31,9 @@
             "src/hasRequestValue.php",
             "src/requestValidationSucceeded.php",
             "src/setRequestValidationTranslationFolderPath.php",
-            "src/validateRequest.php"
+            "src/validateRequest.php",
+            "src/getOldRequestValue.php",
+            "src/storeOldRequestValues.php"
         ]
     },
     "require-dev": {

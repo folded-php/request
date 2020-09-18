@@ -4,8 +4,9 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-use Illuminate\Http\Request as IlluminateRequest;
+use Exception;
 use InvalidArgumentException;
+use Illuminate\Http\Request as IlluminateRequest;
 
 /**
  * Represents an HTTP request.
@@ -14,6 +15,8 @@ use InvalidArgumentException;
  */
 class Request
 {
+    const OLD_VALUES_KEY_NAME = "__folded_old_values";
+
     /**
      * The engine that is responsible for fetching the request values.
      *
@@ -70,6 +73,27 @@ class Request
     }
 
     /**
+     * Get the old value of a previously submited form.
+     *
+     * @param string $key The name of the key holding the form value.
+     *
+     * @throws Exception If sessions are not enabled yet.
+     *
+     * @return null|mixed
+     *
+     * @since 0.3.0
+     *
+     * @example
+     * echo Request::getOldValue("email");
+     */
+    public static function getOldValue(string $key)
+    {
+        self::checkSessionStarted();
+
+        return $_SESSION[self::OLD_VALUES_KEY_NAME][$key] ?? null;
+    }
+
+    /**
      * Get a single value by its key from the request.
      *
      * @param string     $name    The name of the key in the request.
@@ -117,6 +141,23 @@ class Request
     }
 
     /**
+     * Stores old forms values in session for further retrieval.
+     *
+     * @throws Exception If sessions are not started.
+     *
+     * @since 0.3.0
+     *
+     * @example
+     * Request::storeOldValues();
+     */
+    public static function storeOldValues(): void
+    {
+        self::checkSessionStarted();
+
+        $_SESSION[self::OLD_VALUES_KEY_NAME] = self::engine()->request->all();
+    }
+
+    /**
      * Throws an exception if the key name is empty.
      *
      * @throws InvalidArgumentException If the name is empty.
@@ -130,6 +171,27 @@ class Request
     {
         if (empty(trim($name))) {
             throw new InvalidArgumentException("key is empty");
+        }
+    }
+
+    /**
+     * Returns true if sessions are enabled, else returns false.
+     *
+     * @throws Exception If sessions are not enabled.
+     *
+     * @since 0.3.0
+     *
+     * @example
+     * if (Request::sessionStarted()) {
+     *  echo "session started";
+     * } else {
+     *  echo "session not started yet";
+     * }
+     */
+    private static function checkSessionStarted(): void
+    {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            throw new Exception("session not started");
         }
     }
 }
