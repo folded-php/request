@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e542fb2cfb287b399068de9c5b7630a4",
+    "content-hash": "fd5f188335aa906a861526c2eead7499",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -205,16 +205,16 @@
         },
         {
             "name": "folded/exception",
-            "version": "v0.1.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/folded-php/exception.git",
-                "reference": "5e61ee7cf27bdf4e35329aec3bfa4d8ae7ce3612"
+                "reference": "0fd4c4230678d2b36ff7b37bb73fc1e11c9ee258"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/folded-php/exception/zipball/5e61ee7cf27bdf4e35329aec3bfa4d8ae7ce3612",
-                "reference": "5e61ee7cf27bdf4e35329aec3bfa4d8ae7ce3612",
+                "url": "https://api.github.com/repos/folded-php/exception/zipball/0fd4c4230678d2b36ff7b37bb73fc1e11c9ee258",
+                "reference": "0fd4c4230678d2b36ff7b37bb73fc1e11c9ee258",
                 "shasum": ""
             },
             "require": {
@@ -242,7 +242,7 @@
                 }
             ],
             "description": "Various kind of exception to throw for your web app.",
-            "time": "2020-09-06T20:46:52+00:00"
+            "time": "2020-09-18T17:22:08+00:00"
         },
         {
             "name": "illuminate/container",
@@ -5214,5 +5214,6 @@
     "platform": {
         "php": ">=7.4.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
