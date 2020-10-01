@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("storeOldRequestValues")) {
+if (!function_exists("Folded\storeOldRequestValues")) {
     /**
      * Stores old forms values in session for further retrieval.
      *

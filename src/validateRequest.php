@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("validateRequest")) {
+if (!function_exists("Folded\validateRequest")) {
     /**
      * Validate the request data.
      *

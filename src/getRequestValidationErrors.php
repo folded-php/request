@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("getRequestValidationErrors")) {
+if (!function_exists("Folded\getRequestValidationErrors")) {
     /**
      * Returns an object that is traversable, containing the errors messages.
      *

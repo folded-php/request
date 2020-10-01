@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 use Folded\Request;
 
-if (!function_exists("hasRequestValue")) {
+if (!function_exists("Folded\hasRequestValue")) {
     /**
      * Returns true if the request contains the value, else returns false.
      *

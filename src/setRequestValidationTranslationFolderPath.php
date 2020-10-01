@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("setRequestValidationTranslationFolderPath")) {
+if (!function_exists("Folded\setRequestValidationTranslationFolderPath")) {
     /**
      * Set the translation folder path.
      *

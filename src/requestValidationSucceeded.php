@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("requestValidationSucceeded")) {
+if (!function_exists("Folded\requestValidationSucceeded")) {
     /**
      * Returns true if the last validation succeeded, else returns false.
      *

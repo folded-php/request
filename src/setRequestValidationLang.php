@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("setRequestValidationLang")) {
+if (!function_exists("Folded\setRequestValidationLang")) {
     /**
      * Set the lang that is used to return the validation error messages.
      * By default, the "en" lang is used.
