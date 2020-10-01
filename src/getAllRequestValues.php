@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("getAllRequestValues")) {
+if (!function_exists("Folded\getAllRequestValues")) {
     /**
      * Get all the values in the request data.
      *

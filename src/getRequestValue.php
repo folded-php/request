@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("getRequestValue")) {
+if (!function_exists("Folded\getRequestValue")) {
     /**
      * Get a single value by its key from the request.
      *

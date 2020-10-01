@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("getOldRequestValue")) {
+if (!function_exists("Folded\getOldRequestValue")) {
     /**
      * Get the old value of a previously submited form.
      *
