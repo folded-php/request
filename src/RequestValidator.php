@@ -19,7 +19,7 @@ use Folded\Exceptions\FolderNotFoundException;
  *
  * @since 0.1.0
  */
-class RequestValidator
+final class RequestValidator
 {
     /**
      * @since 0.1.0
