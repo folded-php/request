@@ -8,7 +8,9 @@ if (!function_exists("Folded\getRequestValidationErrors")) {
     /**
      * Returns an object that is traversable, containing the errors messages.
      *
-     * @since 0.1.0
+     * @return array<string>|\Illuminate\Support\MessageBag
+     *
+     *  @since 0.1.0
      * @see https://laravel.com/docs/7.x/validation#working-with-error-messages For more information about how to traverse this object.
      *
      * @example

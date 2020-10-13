@@ -58,6 +58,8 @@ final class Request
     /**
      * Get all the values in the request data.
      *
+     * @return array<string,mixed>
+     *
      * @since 0.1.0
      *
      * @example
@@ -100,6 +102,8 @@ final class Request
      * @param null|mixed $default A fallback value in case the key is not found.
      *
      * @throws InvalidArgumentException If the key is not found in the request and no fallback value is specified.
+     *
+     * @return mixed
      *
      * @since 0.1.0
      *
