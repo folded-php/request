@@ -13,7 +13,7 @@ use Illuminate\Http\Request as IlluminateRequest;
  *
  * @since 0.1.0
  */
-class Request
+final class Request
 {
     const OLD_VALUES_KEY_NAME = "__folded_old_values";
 
