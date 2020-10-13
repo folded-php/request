@@ -8,7 +8,7 @@ if (!function_exists("Folded\validateRequest")) {
     /**
      * Validate the request data.
      *
-     * @param array $rules An associative array, which link a request key name and its validation rules.
+     * @param array<string, mixed> $rules An associative array, which link a request key name and its validation rules.
      *
      * @see https://laravel.com/docs/7.x/validation#available-validation-rules To get a list of all available validation.
      *

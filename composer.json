@@ -17,7 +17,10 @@
         "folded/exception": "0.4.*"
     },
     "scripts": {
-        "test": "pest --coverage",
+        "test": [
+            "pest --coverage",
+            "phpstan analyse"
+        ],
         "lint": "php-cs-fixer --allow-risky=yes fix"
     },
     "autoload": {
@@ -39,6 +42,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "2.*",
         "pestphp/pest": "0.3.*",
-        "phpunit/phpunit": "9.*"
+        "phpunit/phpunit": "9.*",
+        "phpstan/phpstan": "0.12.*"
     }
 }

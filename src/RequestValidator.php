@@ -74,6 +74,8 @@ final class RequestValidator
     /**
      * Returns an object that is traversable, containing the errors messages.
      *
+     * @return array<string>|\Illuminate\Support\MessageBag
+     *
      * @since 0.1.0
      * @see https://laravel.com/docs/7.x/validation#working-with-error-messages For more information about how to traverse this object.
      *
@@ -165,7 +167,7 @@ final class RequestValidator
     /**
      * Validate the request data.
      *
-     * @param array $rules An associative array, which link a request key name and its validation rules.
+     * @param array<string,mixed> $rules An associative array, which link a request key name and its validation rules.
      *
      * @see https://laravel.com/docs/7.x/validation#available-validation-rules To get a list of all available validation.
      *

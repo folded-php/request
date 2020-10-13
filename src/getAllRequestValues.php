@@ -8,6 +8,8 @@ if (!function_exists("Folded\getAllRequestValues")) {
     /**
      * Get all the values in the request data.
      *
+     * @return array<string, mixed>
+     *
      * @since 0.1.0
      *
      * @example
